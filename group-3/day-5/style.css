@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.transition .box {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  /* transition: height 1s, width 1s, transform 1s; */
+
+  transition: all 1s;
+}
+
+.transition .box:hover {
+  /* height: 150px;
+  width: 150px; */
+  transform: rotate(60deg) scale(1.5);
+}
+
+.animation {
+  display: flex;
+  flex-direction: column;
+
+  height: 50vh;
+  gap: 20px;
+}
+
+.animation .box-1 {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  background-color: blue;
+  /* animation-name: move;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier();
+  animation-delay: 5s; */
+
+  animation: move 5s infinite linear 2s;
+}
+
+.animation .box-2 {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  background-color: blue;
+  animation-name: move;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes move {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: 200px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .animation .box-1 {
+    background-color: blueviolet;
+  }
+
+  .animation .box-2 {
+    background-color: chartreuse;
+  }
+}

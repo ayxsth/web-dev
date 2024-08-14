@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.box-1 {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  /* transition: height 1s, width 1s, transform 1s; */
+  transition: all 1s;
+}
+
+.box-1:hover {
+  height: 150px;
+  width: 150px;
+  transform: rotate(360deg);
+}
+
+.box-2 {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  background-color: blue;
+  animation-name: move;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: step-start;
+}
+
+.box-3 {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  background-color: blue;
+  /* animation-name: move;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 5s; */
+
+  animation: move 1s infinite ease-in-out 2s;
+}
+
+@keyframes move {
+  0% {
+    left: 0;
+    background-color: blue;
+    transform: scale(1);
+  }
+
+  50% {
+    left: 200px;
+    background-color: red;
+    transform: scale(1.5);
+  }
+
+  100% {
+    left: 0;
+    background-color: blue;
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .box-1 {
+    background-color: green;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .box-1 {
+    background-color: yellow;
+  }
+}

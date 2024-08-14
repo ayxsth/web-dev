@@ -1,0 +1,39 @@
+* {
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+.body {
+  background-color: brown;
+}
+
+#xyz {
+  color: green;
+}
+
+.abc {
+  color: red;
+}
+
+.abc span {
+  color: green;
+}
+
+p {
+  font-size: 20px;
+  color: blue;
+  font-style: italic;
+  line-height: 20px;
+}
+
+p:nth-of-type(2) {
+  color: red;
+}
+
+.box {
+  height: 200px;
+  width: 200px;
+  background-color: blue;
+  color: white;
+  padding: 10px;
+}
